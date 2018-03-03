@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+   <session-factory>
+   <property name="hibernate.dialect">
+      org.hibernate.dialect.MySQLDialect
+   </property>
+   
+   <property name="hibernate.connection.driver_class">
+      com.mysql.jdbc.Driver
+   </property>
+
+   <!-- Assume cs157bproject is the database name -->
+   <property name="hibernate.connection.url">
+      jdbc:mysql://localhost/cs157bproject
+   </property>
+   
+   <!-- Change MySQL credentials -->
+   <property name="hibernate.connection.username">
+      VictorLi
+   </property>
+   <property name="hibernate.connection.password">
+      password
+   </property>
+   
+   <!-- automatically creates the sales table mapped in SalesTransactions.java -->
+   <property name="hbm2ddl.auto">create</property>
+   
+</session-factory>
+</hibernate-configuration>
